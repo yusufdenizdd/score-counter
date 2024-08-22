@@ -1,0 +1,28 @@
+.yukseklik {
+  height: 70vh;
+}
+.container-fluid {
+  height: 100vh;
+  color: white;
+  background-image: url("arkaplan.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.container-fluid::after {
+  content: "";
+  display: block; /* defaultu display inline */
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute; /* üstte .container-fluid relative ya, bunu absolute yapınca .container-fluide göre top left yaptık */
+  top: 0;
+  left: 0;
+  opacity: 0.65; /* 1 verirsek resim görünmez */
+  z-index: 0; /* aşağıda da z-index 10 verdik yani h2 yazıları falan bu karartmanın önüne çıkacak */
+}
+.container-fluid > * {
+  z-index: 10;
+  position: relative;
+}
