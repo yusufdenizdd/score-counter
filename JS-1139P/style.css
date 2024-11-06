@@ -1,8 +1,8 @@
 .yukseklik {
-  height: 70vh;
+  min-height: 70vh;
 }
 .container-fluid {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   background-image: url("arkaplan.jpg");
   background-repeat: no-repeat;
